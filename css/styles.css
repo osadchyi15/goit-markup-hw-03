@@ -4,10 +4,87 @@ body {
   letter-spacing: 0.02em;
   color: #434455;
   background-color: #fff;
+  max-width: 1440px;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.introducing {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+.section:not(:first-child) {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 1158px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+header > .container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e7e9fc;
+}
+
+header .navigation,
+header .menu,
+header .address-menu {
+  display: flex;
+  gap: 40px;
+}
+
+.menu-item,
+.address-item {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.introducing .container {
+  display: flex;
+  width: 1440px;
+  flex-direction: column;
+  height: 600px;
+  justify-content: center;
   background-color: #2e2f42;
+}
+
+.goals .container {
+  width: 1440px;
+}
+
+.team .container {
+  width: 1440px;
 }
 
 .goals {
@@ -33,15 +110,31 @@ body {
   line-height: 1.07;
   text-align: center;
   color: #fff;
+  margin-bottom: 48px;
+  width: 496px;
 }
 
 /* h2 */
-.section {
+.section-title {
   font-weight: 700;
   font-size: 36px;
   letter-spacing: 0.02em;
   line-height: 1.11;
   color: #2e2f42;
+  text-align: center;
+}
+
+.goals .section-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* h3 */
@@ -51,33 +144,16 @@ body {
   letter-spacing: 0.02em;
 }
 
-.button {
-  font-family: "Roboto", sans-serif;
-  color: #fff;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  background-color: #4d5ae5;
-  cursor: pointer;
-}
-
-.button:hover,
-.button:focus {
-  background-color: #404bbf;
-}
-
 .link {
   font-size: 12px;
   line-height: 1.333;
   letter-spacing: 0.04em;
-  text-decoration: underline;
+  text-decoration: none;
   color: #2e2f42;
 }
 
 /* header */
-
-/* logo */
-.link-logo {
+.logo-link {
   text-decoration: none;
   color: #4d5ae5;
   text-transform: uppercase;
@@ -86,24 +162,25 @@ body {
   line-height: 1.17;
   letter-spacing: 0.03em;
   font-family: "Raleway", sans-serif;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-.link-logo .studio {
+.logo-link .studio {
   color: #2e2f42;
 }
 
-/* navigation */
-.link-nav {
+.menu-link {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  text-decoration: underline;
+  text-decoration: none;
   color: #2e2f42;
 }
 
-.link-nav:hover,
-.link-nav:focus {
+.menu-link:hover,
+.menu-link:focus {
   color: #404bbf;
 }
 
@@ -116,90 +193,149 @@ body {
   font-style: normal;
 }
 
+.address-link {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+  font-style: normal;
+}
+
 .address-link:hover,
 .address-link:focus {
   color: #404bbf;
   font-style: normal;
 }
 
-.paragraf-goals {
+/* introducing */
+.button {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  background-color: #4d5ae5;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.button:hover,
+.button:focus {
+  background-color: #404bbf;
+}
+
+/* our goals */
+.goals-list {
+  display: flex;
+  gap: 24px;
+}
+
+.goals-item {
+  padding-bottom: 8px;
+  width: calc((100%-24px * 3) / 4);
+}
+
+.goals-title {
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+}
+
+.goals-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
 }
 
-.paragraf-team {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
+/* our team */
+.team-list {
+  display: flex;
+  gap: 24px;
+  padding-top: 72px;
 }
 
 .team-items {
   background-color: #ffffff;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
-.paragraf-portfolio {
+.team-title {
+  line-height: 1.2;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  padding-bottom: 8px;
+}
+
+.team-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.team-inside {
+  padding: 32px 16px;
+}
+
+.team-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
 }
 
-.footer {
-  background-color: #2e2f42;
-}
-
-.footer .link-logo {
-  font-family: "Raleway", sans-serifl;
-  letter-spacing: 0.03em;
-}
-
-.footer-logo .studio {
-  color: #f4f4fd;
-  letter-spacing: 0.03em;
-}
-
-.paragraf-footer {
-  color: #f4f4fd;
-}
-
-.address {
-  font-style: normal;
-}
-
-.address-link {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
-}
-
-.team .section {
-  line-height: 1.11;
-}
-
-.team .section-item {
-  line-height: 1.2;
-}
-
-.portfolio .section {
-  line-height: 1.11;
-  color: #2e2f42;
-}
-
-.portfolio .section-item {
-  line-height: 1.2;
-  color: #2e2f42;
+/* portfolio */
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding-top: 72px;
 }
 
 .portfolio-item {
+  width: calc((100%-48px) / 3);
+  border: 1px solid #e7e9fc;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-inside {
+  padding: 32px 16px;
+}
+
+.portfolio-text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+
+.portfolio-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding-bottom: 8px;
+}
+
+/* footer */
+.footer {
+  background-color: #2e2f42;
+  width: ;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .footer-logo {
@@ -210,4 +346,14 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+}
+
+.footer-logo .studio {
+  color: #f4f4fd;
+  letter-spacing: 0.03em;
+}
+
+.footer-text {
+  color: #f4f4fd;
+  width: 264px;
 }
