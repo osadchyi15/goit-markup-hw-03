@@ -45,20 +45,27 @@ img {
 
 .container {
   box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
   align-items: center;
   max-width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 section {
   max-width: 1440px;
 }
 
+.page-header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
 header > .container {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #e7e9fc;
+}
+
+.navigation {
+  align-items: center;
 }
 
 header .navigation,
@@ -97,19 +104,6 @@ header .address-menu {
   text-transform: capitalize;
 }
 
-/* h1 */
-.title-name {
-  font-weight: 700;
-  font-size: 56px;
-  letter-spacing: 0.02em;
-  line-height: 1.07;
-  text-align: center;
-  color: #fff;
-  margin-bottom: 48px;
-  width: 496px;
-}
-
-/* h2 */
 .section-title {
   font-weight: 700;
   font-size: 36px;
@@ -117,19 +111,6 @@ header .address-menu {
   line-height: 1.11;
   color: #2e2f42;
   text-align: center;
-}
-
-.goals .section-title {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 /* h3 */
@@ -157,12 +138,15 @@ header .address-menu {
   line-height: 1.17;
   letter-spacing: 0.03em;
   font-family: "Raleway", sans-serif;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-right: 76px;
 }
 
 .logo-link .studio {
   color: #2e2f42;
+}
+
+.menu {
+  padding: 24px 0;
 }
 
 .menu-link {
@@ -205,14 +189,25 @@ header .address-menu {
 /* introducing */
 .introducing {
   background-color: #2e2f42;
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 
 .introducing .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 188px;
-  padding-bottom: 188px;
+}
+
+.title-name {
+  font-weight: 700;
+  font-size: 56px;
+  letter-spacing: 0.02em;
+  line-height: 1.07;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 48px;
+  max-width: 496px;
 }
 
 .button {
@@ -225,6 +220,9 @@ header .address-menu {
   cursor: pointer;
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  min-width: 169px;
+  height: 56px;
+  border: none;
 }
 
 .button:hover,
@@ -233,7 +231,6 @@ header .address-menu {
 }
 
 /* our goals */
-
 .goals-list {
   display: flex;
   gap: 24px;
@@ -241,14 +238,27 @@ header .address-menu {
 }
 
 .goals-item {
-  padding-bottom: 8px;
-  width: calc((100%-24px * 3) / 4);
+  width: calc((100%-72px) / 4);
 }
 
 .goals-title {
   font-weight: 500;
   font-size: 20px;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.goals .section-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .goals-text {
@@ -266,6 +276,10 @@ header .address-menu {
   justify-content: center;
 }
 
+.team .section-title {
+  margin-bottom: 72px;
+}
+
 .team-items {
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
@@ -279,16 +293,17 @@ header .address-menu {
   font-weight: 500;
   font-size: 20px;
   letter-spacing: 0.02em;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .team-items {
   display: flex;
   flex-direction: column;
+  width: calc((100%-72px) / 4);
 }
 
 .team-inside {
-  padding: 32px 16px;
+  padding: 32px 0px;
 }
 
 .team-text {
@@ -302,19 +317,24 @@ header .address-menu {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
-  padding-top: 72px;
+  column-gap: 24px;
+  row-gap: 48px;
+}
+
+.portfolio .section-title {
+  margin-bottom: 72px;
 }
 
 .portfolio-item {
-  width: calc((100%-48px) / 3);
-  border: 1px solid #e7e9fc;
+  width: calc((100% - 48px) / 3);
   display: flex;
   flex-direction: column;
 }
 
 .portfolio-inside {
   padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
 }
 
 .portfolio-text {
@@ -330,12 +350,13 @@ header .address-menu {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 /* footer */
-.footer {
+.page-footer {
   background-color: #2e2f42;
+  padding: 100px 0;
 }
 
 .footer .container {
@@ -343,8 +364,6 @@ header .address-menu {
   flex-direction: column;
   gap: 16px;
   align-items: flex-start;
-  padding-top: 100px;
-  padding-bottom: 100px;
 }
 
 .footer-logo {
@@ -355,6 +374,8 @@ header .address-menu {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 .footer-logo .studio {
