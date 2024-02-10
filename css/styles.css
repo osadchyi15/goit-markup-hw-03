@@ -45,10 +45,14 @@ img {
 
 .container {
   box-sizing: border-box;
-  width: 1158px;
   margin-left: auto;
   margin-right: auto;
   align-items: center;
+  max-width: 1158px;
+}
+
+section {
+  max-width: 1440px;
 }
 
 header > .container {
@@ -68,15 +72,6 @@ header .address-menu {
 .address-item {
   padding-top: 24px;
   padding-bottom: 24px;
-}
-
-.introducing .container {
-  display: flex;
-  width: 1440px;
-  flex-direction: column;
-  height: 600px;
-  justify-content: center;
-  background-color: #2e2f42;
 }
 
 .goals .container {
@@ -208,6 +203,18 @@ header .address-menu {
 }
 
 /* introducing */
+.introducing {
+  background-color: #2e2f42;
+}
+
+.introducing .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 188px;
+  padding-bottom: 188px;
+}
+
 .button {
   font-family: "Roboto", sans-serif;
   color: #fff;
@@ -226,9 +233,11 @@ header .address-menu {
 }
 
 /* our goals */
+
 .goals-list {
   display: flex;
   gap: 24px;
+  justify-content: center;
 }
 
 .goals-item {
@@ -254,6 +263,7 @@ header .address-menu {
   display: flex;
   gap: 24px;
   padding-top: 72px;
+  justify-content: center;
 }
 
 .team-items {
@@ -326,7 +336,6 @@ header .address-menu {
 /* footer */
 .footer {
   background-color: #2e2f42;
-  width: ;
 }
 
 .footer .container {
