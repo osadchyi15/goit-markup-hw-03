@@ -75,10 +75,8 @@ header .address-menu {
   gap: 40px;
 }
 
-.menu-item,
-.address-item {
-  padding-top: 24px;
-  padding-bottom: 24px;
+.menu-item {
+  padding: 24px 0;
 }
 
 .goals .container {
